@@ -1,3 +1,16 @@
+#Testing
+"""
+for number in range(3):
+    print
+
+annual_salary = float()
+savings = float()
+down_payment = float()
+
+integers = input(f"enter an amount: salary {annual_salary}, saved {savings}, cost {down_payment}")
+print("amounts\n", integers)
+"""
+
 #Part A: house hunting (Ps1a.py)
 how many months needed to save enough for down payment?
 def houseHunting(total_cost, annual_salary, portion_saved):
