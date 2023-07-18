@@ -1,38 +1,27 @@
-#Testing
-"""
-for number in range(3):
-    print
+#Part A: house hunting
+#how many months needed to save enough for down payment?
 
-annual_salary = float()
-savings = float()
-down_payment = float()
-
-integers = input(f"enter an amount: salary {annual_salary}, saved {savings}, cost {down_payment}")
-print("amounts\n", integers)
-"""
-
-#Part A: house hunting (Ps1a.py)
 def houseHunting(annual_salary, portion_saved, total_cost):
     number_of_months = 0
     portion_down_payment = total_cost*(25/100)
     r = (4/100)
     current_savings = 0
-    #investments = 0
+    investments = 0
     notEnough = True
     
     while notEnough:
-        current_savings += (((annual_salary*portion_saved)*r)/12)
-        #investments += ((current_savings*r)/12)
+        current_savings += investments + ((annual_salary*portion_saved)/12)
+        investments = (current_savings*r)/12
         number_of_months +=1
             
-        if current_savings == portion_down_payment:
+        if current_savings >= portion_down_payment:
             notEnough = False
-    print("number of months to save for down payment", number_of_months)
+    print(f'Number of months to save for down payment {number_of_months} or {number_of_months/12} years')
 
 
 print("Please enter your annual income: ")
 annual_salary = float(input())
-print("Please enter your savings and investments: ")
+print("Please enter the percentage to be saved every month: ")
 portion_saved = float(input())
 print("Please enter the current cost of the house: ")
 total_cost = float(input())
