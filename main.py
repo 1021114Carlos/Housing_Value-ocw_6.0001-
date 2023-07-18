@@ -1,4 +1,4 @@
-#Part A: house hunting
+#Part A: house hunting (ps1a.py)
 #how many months needed to save enough for down payment?
 
 def houseHunting(annual_salary, portion_saved, total_cost):
